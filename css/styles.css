@@ -25,9 +25,6 @@ body {
 .side:not(.back) {
   opacity: 0.5;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(-45deg, #8a5848 25%, transparent 25%, transparent 75%, #8a5848 75%, #8a5848),
-    linear-gradient(45deg, #8a5848 25%, transparent 25%, transparent 75%, #8a5848 75%, #8a5848);
-  background-size: 10px 10px;
 
   width: var(--baseWidth);
   height: var(--baseHeight);
@@ -35,28 +32,34 @@ body {
   position: absolute;
 }
 
+.left, .right {
+    background-image: linear-gradient(-45deg, #8a5848 25%, transparent 25%, transparent 75%, #8a5848 75%, #8a5848),
+    linear-gradient(45deg, #8a5848 25%, transparent 25%, transparent 75%, #8a5848 75%, #8a5848);
+  background-size: 10px 10px;
+}
+
 .side.top {
   transform-origin: top;
-  background-color: #87CEEB;
+  background-color: #426a7b;
   transform: rotateX(-90deg);
 }
 
 .side.right {
   transform-origin: right;
-  background-color: #D3D3D3;
+  background-color: #284569;
   width: var(--baseHeight);
   transform: rotateY(-90deg) translateZ(calc(-1*calc(var(--baseWidth) - var(--baseHeight))));
 }
 
 .side.bottom {
   transform-origin: bottom;
-  background-color: #98FB98;
+  background-color: #284569;
   transform: rotateX(90deg);
 }
 
 .side.left {
   transform-origin: left;
-  background-color: #E6E6FA;
+  background-color: #284569;
   width: var(--baseHeight);
   transform: rotateY(90deg);
 }
@@ -70,4 +73,25 @@ body {
 
   transform-origin: center;
   transform: translateZ(calc(-1*var(--baseHeight)));
+}
+
+/*  */
+
+.content {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  color: black;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
 }
