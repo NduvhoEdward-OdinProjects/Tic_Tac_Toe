@@ -104,14 +104,14 @@ body {
 /*  */
 .board, .stats {
   background-color: #8a5848;
-  height: 70cqh;
+  height: 70cqmin;
   position: absolute;
   top: 56%;
   transform: translate(-50%, -50%) translateZ(-8px);
   border-radius: 1rem;
 }
 .board {
-  width: 70cqh;
+  width: 70cqmin;
   left: 72%;
   box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.5);
 
@@ -135,6 +135,13 @@ body {
   background-color: #686060;
   border-radius: 1rem;
   box-shadow: 7px 0px 20px 0px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  line-height: 100%;
+  font-size: 10vmin;
 }
 .side.bottom .game-info {
   width: 30%;
