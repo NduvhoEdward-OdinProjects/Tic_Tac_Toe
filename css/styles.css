@@ -1,0 +1,73 @@
+:root {
+  --baseWidth: 95vw;
+  --baseHeight: 95vh;
+  --baseDepth: 600px;
+}
+
+body {
+  height: 100vh;
+  background-color: #f1e3e3;
+  perspective: 40rem;
+}
+
+.room {
+  perspective: 600px;
+  transform-style: preserve-3d;
+
+  position: relative;
+  width: var(--baseWidth);
+  height: var(--baseHeight);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.side:not(.back) {
+  opacity: 0.5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(-45deg, #8a5848 25%, transparent 25%, transparent 75%, #8a5848 75%, #8a5848),
+    linear-gradient(45deg, #8a5848 25%, transparent 25%, transparent 75%, #8a5848 75%, #8a5848);
+  background-size: 10px 10px;
+
+  width: var(--baseWidth);
+  height: var(--baseHeight);
+
+  position: absolute;
+}
+
+.side.top {
+  transform-origin: top;
+  background-color: #87CEEB;
+  transform: rotateX(-90deg);
+}
+
+.side.right {
+  transform-origin: right;
+  background-color: #D3D3D3;
+  width: var(--baseHeight);
+  transform: rotateY(-90deg) translateZ(calc(-1*calc(var(--baseWidth) - var(--baseHeight))));
+}
+
+.side.bottom {
+  transform-origin: bottom;
+  background-color: #98FB98;
+  transform: rotateX(90deg);
+}
+
+.side.left {
+  transform-origin: left;
+  background-color: #E6E6FA;
+  width: var(--baseHeight);
+  transform: rotateY(90deg);
+}
+
+.side.back {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+
+  transform-origin: center;
+  transform: translateZ(calc(-1*var(--baseHeight)));
+}
