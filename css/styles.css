@@ -129,6 +129,8 @@ body {
   width: 25cqw;
   left: 15%;
   box-shadow: 7px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 5px 15px black;
+  
   transform-origin: left;
   transform: translate(-50%, -50%) translateZ(-8px) rotateY(90deg);
 
@@ -140,6 +142,7 @@ body {
   background-color: #686060;
   border-radius: 1rem;
   box-shadow: 7px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 5px 15px black;
 
   display: flex;
   justify-content: center;
