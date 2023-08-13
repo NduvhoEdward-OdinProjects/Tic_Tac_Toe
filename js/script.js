@@ -1,9 +1,12 @@
 // Cells click events...
 let cells = document.querySelectorAll(".cell");
+let resetButton = document.querySelector(".resetButton");
 
 cells.forEach(cell => {
   cell.addEventListener('click', play);
 });
+
+resetButton.addEventListener('click', resetBoard);
 
 const Player = (name, symbol) => {
   const playerName = name;

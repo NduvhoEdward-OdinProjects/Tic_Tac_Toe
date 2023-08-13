@@ -186,3 +186,13 @@ body {
 .displayWinner {
   display: block;
 }
+
+.resetButton {
+  text-transform: none;
+  height: 2rem;
+  align-self: end;
+  background-color: #8a5848;
+  color: black;
+  font-size: larger;
+  font-style: oblique;
+}
