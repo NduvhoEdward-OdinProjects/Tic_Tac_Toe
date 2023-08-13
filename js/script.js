@@ -1,4 +1,3 @@
-// Cells click events...
 let cells = document.querySelectorAll(".cell");
 let resetButton = document.querySelector(".resetButton");
 
@@ -33,7 +32,6 @@ function play(event) {
 
   if (checkWin()) {
     // alert(`${currentPlayer.playerName} wins!`);
-    // resetBoard();
     gameOver = true;
     return;
   }
@@ -41,7 +39,6 @@ function play(event) {
   if (checkDraw()) {
     // alert("It's a draw!");
     console.log('drw')
-    // resetBoard();
     return;
   }
 
