@@ -130,7 +130,7 @@ body {
   left: 15%;
   box-shadow: 7px 0px 20px 0px rgba(0, 0, 0, 0.5);
   text-shadow: 0px 5px 15px black;
-  
+
   transform-origin: left;
   transform: translate(-50%, -50%) translateZ(-8px) rotateY(90deg);
 
@@ -167,4 +167,22 @@ body {
 .stats h3 {
   font-size: 2rem;
   text-decoration: underline;
+}
+
+.winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+  font-size: 4rem;
+  text-shadow: 0px 8px 12px black;
+
+  display: none;
+}
+
+.displayWinner {
+  display: block;
 }
